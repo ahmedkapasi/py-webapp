@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    td,th{
+        border:solid;
+        border-width:1px
+    }
+
+
+
+
+
+</style>
+<body>
+<h1>Hi Welcome to my webapp</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Address</th>
+    </tr>
+    {% for item in students %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.age }}</td>
+        <td>{{ item.address }}</td>
+    </tr>
+    {% endfor %}
+</table>
+<br/><br/>
+<form method="POST">
+    <table>
+        <tr>
+            <td>
+                Student Name
+            </td>
+            <td>
+                <input name="name" type="text" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Student Age
+            </td>
+            <td>
+                <input name="age" type="text" value=""/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Student Address
+            </td>
+            <td>
+                <input name="address" type="text" value=""/>
+            </td>
+        </tr>
+    </table>
+    <br/>
+    <input type="submit" value="Add"/>
+</form>
+</body>
+</html>
